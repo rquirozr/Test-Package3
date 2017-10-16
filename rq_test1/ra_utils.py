@@ -1,6 +1,8 @@
-################################ DataFrame Utils ################################
+#---------------------------------- DataFrame Utils ----------------------------------#
+
+import pandas as pd
+
 class DataframeUtils(object):
-    import pandas as pd
     
     @classmethod
     def get_cuc_from_doc_in_df(cls, df, column_doctype, column_doc, column_cuc):
@@ -202,9 +204,8 @@ class DataframeUtils(object):
         return valid_columns, categorical_columns, \
                numerical_columns, nominal_columns
 
-################################ Format Utils ################################
+#---------------------------------- Format Utils ----------------------------------#
 class FormatUtils(object):
-    import pandas as pd
 
     __str_date_format = '%d/%m/%Y'
 
