@@ -143,7 +143,7 @@ class DataframeUtils(object):
                    sum().reset_index(drop=True)[columns]
 
     @classmethod
-    def get_categorical_columns(cls, df, columns_to_exclude):
+    def get_categorical_columns(cls, df, columns_to_exclude = []):
         """
         Returns a list with the categorical columns.
         df: Dataframe.
@@ -156,7 +156,7 @@ class DataframeUtils(object):
              if x not in columns_to_exclude]
 
     @classmethod
-    def get_numerical_columns(cls, df, columns_to_exclude):
+    def get_numerical_columns(cls, df, columns_to_exclude = []):
         """
         Returns a list with the numerical columns.
         df: Dataframe.
@@ -173,7 +173,7 @@ class DataframeUtils(object):
                              print_flag=False):
         """
         Returns a tuple with the valid, categorical, numerical and nomial columns.
-        Example: cols, cols_cat, cols_num, cols_nom = cols_tipos(df, columns_to_exclude, ordinal_columns, print_flag = True)
+        Example: cols, cols_cat, cols_num, cols_nom = ra_df.get_columns_by_types(df, columns_to_exclude, ordinal_columns, print_flag = True)
         df: Dataframe.
         columns_to_exclude: (str, list) Column names to exclude (like IDs, Target, text, descriptions, etc).
         ordinal_columns: (str, list) Column names of the ordinal variables.

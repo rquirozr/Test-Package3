@@ -1,6 +1,6 @@
 
-import pandas as pd
 #import numpy as np
+import pandas as pd
     
 class DataframeUtils(object):
     
@@ -47,7 +47,7 @@ class DataframeUtils(object):
     @classmethod
     def descrip_colmuns(cls, df, cols = None, n_vals = 6, summary = True):
         """
-        Returns a DataFrame with descriptives like, dtype, N° Nulls,\
+        Returns a DataFrame with descriptives like, dtype, N° Nulls,
         most frequency values, mean, etc by each column.
         df: Dataframe.
         cols: (str, list) Column(s) name for describing.
@@ -143,7 +143,7 @@ class DataframeUtils(object):
                    sum().reset_index(drop=True)[columns]
 
     @classmethod
-    def get_categorical_columns(cls, df, columns_to_exclude):
+    def get_categorical_columns(cls, df, columns_to_exclude = []):
         """
         Returns a list with the categorical columns.
         df: Dataframe.
@@ -156,7 +156,7 @@ class DataframeUtils(object):
              if x not in columns_to_exclude]
 
     @classmethod
-    def get_numerical_columns(cls, df, columns_to_exclude):
+    def get_numerical_columns(cls, df, columns_to_exclude = []):
         """
         Returns a list with the numerical columns.
         df: Dataframe.
